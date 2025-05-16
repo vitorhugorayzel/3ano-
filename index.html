@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo e Cidade: Interdependência e Diferenças</title>
+    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/babel@7.24.7/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div id="root"></div>
+    <script type="text/babel">
+        const NavBar = () => {
+            return (
+                <nav className="bg-green-600 text-white p-4">
+                    <div className="container mx-auto flex justify-between items-center">
+                        <h1 className="text-2xl font-bold">Campo e Cidade</h1>
+                        <ul className="flex space-x-4">
+                            <li><a href="#definicoes" className="hover:underline">Definições</a></li>
+                            <li><a href="#diferencas" className="hover:underline">Diferenças</a></li>
+                            <li><a href="#interdependencia" className="hover:underline">Interdependência</a></li>
+                            <li><a href="#impactos" className="hover:underline">Impactos</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            );
+        };
+
+        const Section = ({ id, title, children }) => {
+            return (
+                <section id={id} className="py-12 px-4">
+                    <div className="container mx-auto">
+                        <h2 className="text-3xl font-bold mb-6 text-green-800">{title}</h2>
+                        {children}
+                    </div>
+                </section>
+            );
+        };
+
+        const App = () => {
+            return (
+                <div>
+                    <NavBar />
+                    <Section id="definicoes" title="Definições: O que é Campo e Cidade?">
+                        <p className="text-lg mb-4">
+                            O <strong>campo</strong> (ou zona rural) é caracterizado por grandes extensões de terra com baixa densidade populacional, onde predominam atividades do setor primário, como agricultura, pecuária e extrativismo. As paisagens rurais são marcadas por elementos naturais, como plantações e pastagens, embora modificadas pelo trabalho humano.[](https://humanidades.com/br/campo-e-cidade/)[](https://sme.goiania.go.gov.br/conexaoescola/eaja/geografia-relacoes-entre-o-campo-e-a-cidade-e-suas-especificidades/)
+                        </p>
+                        <p className="text-lg mb-4">
+                            A <strong>cidade</strong> (ou zona urbana) é um espaço densamente povoado, com construções próximas, como casas, edifícios, hospitais e escolas. É o centro das atividades industriais e de serviços (setores secundário e terciário), funcionando como polo de organização social e econômica.[](https://humanidades.com/br/campo-e-cidade/)[](https://sme.goiania.go.gov.br/conexaoescola/eaja/relacao-campo-e-cidade/)
+                        </p>
+                        <p className="text-lg mb-4">
+                            Enquanto "campo" e "cidade" referem-se a formas espaciais concretas, "rural" e "urbano" são representações sociais que refletem modos de vida e relações com o ambiente.[](https://meuartigo.brasilescola.uol.com.br/geografia/as-relacoes-entre-cidade-campo.htm)
+                        </p>
+                    </Section>
+                    <Section id="diferencas" title="Diferenças entre Campo e Cidade">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div className="bg-white p-6 rounded-lg shadow-md">
+                                <h3 className="text-xl font-semibold mb-2">Campo</h3>
+                                <ul className="list-disc pl-5 space-y-2">
+                                    <li>Baixa densidade populacional, com casas dispersas.</li>
+                                    <li>Paisagem natural, com plantações, florestas e rios.</li>
+                                    <li>Atividades econômicas primárias (agricultura, pecuária).</li>
+                                    <li>Infraestrutura limitada, com menos acesso a serviços como hospitais e universidades.[](https://humanidades.com/br/campo-e-cidade/)
+                                    <li>Estilo de vida mais próximo da natureza, menos sedentário.[](https://humanidades.com/br/campo-e-cidade/)
+                                </ul>
+                            </div>
+                            <div className="bg-white p-6 rounded-lg shadow-md">
+                                <h3 className="text-xl font-semibold mb-2">Cidade</h3>
+                                <ul className="list-disc pl-5 space-y-2">
+                                    <li>Alta densidade populacional, com construções próximas.</li>
+                                    <li>Paisagem artificial, com concreto, asfalto e edifícios.</li>
+                                    <li>Atividades econômicas secundárias (indústria) e terciárias (serviços).</li>
+                                    <li>Infraestrutura desenvolvida, com transporte público, hospitais e escolas.[](https://humanidades.com/br/campo-e-cidade/)
+                                    <li>Vida urbana acelerada, com maior diversidade cultural.[](https://humanidades.com/br/campo-e-cidade/)
+                                </ul>
+                            </div>
+                        </div>
+                    </Section>
+                    <Section id="interdependencia" title="Interdependência entre Campo e Cidade">
+                        <p className="text-lg mb-4">
+                            Campo e cidade são interdependentes, funcionando de forma complementar. O campo fornece alimentos (como arroz, feijão, milho) e matérias-primas (como algodão e madeira) para as cidades, enquanto as cidades oferecem serviços, infraestrutura e produtos industrializados ao campo.[](https://humanidades.com/br/campo-e-cidade/)[](https://www.auditorioibirapuera.com.br/o-que-a-cidade-oferece-para-o-campo/)
+                        </p>
+                        <p className="text-lg mb-4">
+                            Por exemplo, a agricultura familiar no campo abastece mercados urbanos, enquanto as cidades fornecem tecnologias agrícolas e serviços como educação e saúde para as zonas rurais. Essa relação movimenta a economia, como visto em Goiás, onde o agronegócio impulsiona tanto o campo quanto as cidades.[](https://g1.globo.com/go/goias/especial-publicitario/senar-goias/noticia/relacao-entre-campo-e-zona-urbana-movimenta-economia-e-garante-renda.ghtml)
+                        </p>
+                        <p className="text-lg mb-4">
+                            A modernização do campo, com o uso de máquinas e transgênicos, aumentou a produtividade, mas também contribuiu para o êxodo rural, onde trabalhadores migram para as cidades em busca de melhores oportunidades.[](https://guiadoensino.com.br/geografia/espacos-geograficos/)
+                        </p>
+                    </Section>
+                    <Section id="impactos" title="Impactos Socioeconômicos e Culturais">
+                        <p className="text-lg mb-4">
+                            A relação entre campo e cidade tem impactos profundos. O êxodo rural, intensificado no Brasil após 1950, transformou a estrutura social, com 84% da população vivendo em áreas urbanas em 2010. Isso gerou desafios como crescimento desordenado das cidades e favelização.[](https://www.unifal-mg.edu.br/portal/2022/05/10/o-campo-e-suas-multiplas-contribuicoes-para-a-sociedade-e-a-natureza/)[](https://www.ub.edu/geocrit/b3w-1090.htm)
+                        </p>
+                        <p className="text-lg mb-4">
+                            Culturalmente, o campo preserva tradições, como festas rurais e culinária típica, enquanto as cidades promovem diversidade cultural e cosmopolitismo. Ambos os espaços influenciam a identidade brasileira, com pratos como feijoada e pamonha conectando o rural ao urbano.[](https://sme.goiania.go.gov.br/conexaoescola/ensino_fundamental/historia-do-campo-para-a-cidade/)
+                        </p>
+                        <p className="text-lg mb-4">
+                            A sustentabilidade é outro desafio. A agricultura familiar promove práticas mais sustentáveis, enquanto o agronegócio pode causar desmatamento e poluição. Políticas que incentivem a permanência no campo são essenciais para equilibrar essa relação.[](https://www.unifal-mg.edu.br/portal/2022/05/10/o-campo-e-suas-multiplas-contribuicoes-para-a-sociedade-e-a-natureza/)
+                        </p>
+                    </Section>
+                    <footer className="bg-green-600 text-white p-4 text-center">
+                        <p>&copy; 2025 Campo e Cidade. Todos os direitos reservados.</p>
+                        <p>Desenvolvido com React e Tailwind CSS.</p>
+                    </footer>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
